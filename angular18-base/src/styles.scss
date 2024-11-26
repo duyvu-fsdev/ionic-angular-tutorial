@@ -1,0 +1,129 @@
+* {
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+ width: 6px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+ background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+ background: #80808021;
+ border-radius: 6px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+ background: #80808080;
+}
+
+body {
+ font-family: 'Be Vietnam Pro', sans-serif;
+}
+:root {
+ --primary-color: #605dc8;
+ --secondary-color: #8b89e6;
+ --warning-color: orange;
+ --danger-color: red;
+ --accent-color: #e8e7fa;
+ --shadow-color: #e8e8e8;
+}
+
+a {
+ cursor: pointer;
+}
+
+button {
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ padding: 5px 10px;
+ border-radius: 8px;
+ min-height: 30px;
+ &:hover {
+  opacity: 0.5;
+ }
+ &:active {
+  opacity: 1;
+ }
+}
+
+button:disabled {
+ opacity: 0.3 !important;
+ cursor: auto !important;
+}
+
+button.primary {
+ border: solid 1px var(--primary-color);
+ background: var(--primary-color);
+ color: white;
+}
+
+button.wn {
+ border: solid 1px var(--warning-color);
+ background: var(--warning-color);
+ color: white;
+}
+
+button.da {
+ border: solid 1px var(--danger-color);
+ background: var(--danger-color);
+ color: white;
+}
+
+.component-container {
+ margin: 10px 0;
+ width: fit-content;
+ background-color: rgba(128, 128, 128, 0.164);
+ box-shadow: 0px 0px 5px 1px rgb(255, 0, 0);
+ padding: 10px;
+ border-radius: 5px;
+}
+
+li {
+ & + li {
+  margin-top: 5px;
+ }
+}
+
+.block {
+ position: relative;
+ background-color: rgba(128, 128, 128, 0.164);
+ box-shadow: 2px 2px 3px 0px rgba(0, 0, 255, 0.363);
+ padding: 20px;
+ border-radius: 10px;
+ & + .block {
+  margin-top: 10px;
+ }
+}
+
+.sub-block {
+ background-color: rgba(128, 128, 128, 0.164);
+ box-shadow: 2px 2px 3px 0px rgba(0, 0, 255, 0.363);
+ padding: 10px;
+ border-radius: 10px;
+ & + .sub-block {
+  margin-top: 10px;
+ }
+}
+
+.w-fc {
+ width: fit-content;
+}
+
+.title {
+ color: var(--primary-color);
+ font-size: 20px;
+ font-weight: bold;
+}
+
+.sub-title {
+ color: var(--secondary-color);
+ font-size: 16px;
+ font-weight: bold;
+}

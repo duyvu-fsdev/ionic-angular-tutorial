@@ -1,0 +1,13 @@
+.effects,
+.computed {
+ button,
+ p {
+  display: flex;
+  margin: 0;
+  width: fit-content;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+ }
+}

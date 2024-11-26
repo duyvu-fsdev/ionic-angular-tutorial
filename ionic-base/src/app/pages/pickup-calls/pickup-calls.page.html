@@ -1,0 +1,28 @@
+<ion-header>
+ <ion-toolbar color="success">
+  <ion-buttons slot="start">
+   <ion-back-button [defaultHref]="'home'"> </ion-back-button>
+  </ion-buttons>
+  <ion-title>My pickup calls</ion-title>
+ </ion-toolbar>
+</ion-header>
+<ion-content>
+ <app-pickup-call-card
+  status="hold"
+  updatedAt="13/10/2024 17:03:00"
+  createdAt="13/10/2024 10:03:00"
+  notes="We have two bags that are full. One with plastic and the other with glases"
+ />
+ <app-pickup-call-card
+  status="processing"
+  updatedAt="14/10/2024 18:03:00"
+  createdAt="13/10/2024 10:03:00"
+  notes="we have two bags that are full."
+ />
+ <app-pickup-call-card
+  status="finished"
+  updatedAt="14/10/2024 20:03:00"
+  createdAt="13/10/2024 10:03:00"
+  vallue="35"
+ />
+</ion-content>

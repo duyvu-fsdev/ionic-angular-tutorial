@@ -1,0 +1,141 @@
+#main {
+ margin-left: 10px;
+ display: flex;
+ justify-content: center;
+}
+.container {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ right: 0;
+ left: 0;
+ display: flex;
+ border: 1px solid #80808021;
+ gap: 1px;
+}
+.left {
+ padding: 10px;
+ display: flex;
+ gap: 10px;
+ flex-direction: column;
+ position: relative;
+ overflow-y: scroll;
+ width: 450px;
+ min-width: 450px;
+ .left-header {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  gap: 10px;
+  img.home {
+   width: 30px;
+   height: 30px;
+   background-color: #fff;
+  }
+  #title {
+   color: red;
+  }
+ }
+ .lesson,
+ .lesson-2 {
+  //  width: fit-content;
+  background-color: rgba(128, 128, 128, 0.164);
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 255, 0.363);
+  padding: 20px 20px 30px;
+  border-radius: 10px;
+  .title {
+   margin: 5px 0px 10px 0px;
+   color: blue;
+  }
+  ul {
+   font-weight: 600;
+   margin-left: 20px;
+   list-style: decimal;
+   li + li {
+    margin-top: 5px;
+   }
+   ul.sub {
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: 10px;
+    list-style: disc;
+    li {
+     & + li {
+      margin-bottom: 5px;
+     }
+    }
+    li:last-child {
+     margin-bottom: 20px;
+    }
+   }
+  }
+ }
+ .lesson-2 {
+  padding: 20px;
+  a {
+   text-decoration: none;
+   color: blue;
+  }
+ }
+ .highlight {
+  background: yellow;
+  padding: 20px;
+  color: red;
+  font-weight: bold;
+ }
+}
+
+:host {
+ --content-padding: 10px;
+}
+
+.right {
+ flex: 1;
+ box-shadow: 0 0 3px 0px var(--primary-color);
+ overflow-y: scroll;
+ height: 100%;
+ .header {
+  background-color: rgb(0, 0, 0);
+  display: block;
+  box-shadow: 0px 5px 25px var(--shadow-color);
+  margin: 5px;
+  color: var(--primary-color);
+ }
+ .main-content {
+  // position: relative;
+  padding: 10px;
+ }
+}
+
+.message {
+}
+
+.dialog-container {
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ display: flex;
+ justify-content: center;
+ align-items: flex-end;
+ z-index: 1000;
+ padding: 20px;
+}
+
+.dialog-box {
+ background-color: red;
+ color: white;
+ padding: 10px 20px;
+ border-radius: 5px;
+ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+ animation: slideUp 0.2s ease-in-out;
+}
+
+@keyframes slideUp {
+ from {
+  transform: translateY(100%);
+ }
+ to {
+  transform: translateY(10px);
+ }
+}

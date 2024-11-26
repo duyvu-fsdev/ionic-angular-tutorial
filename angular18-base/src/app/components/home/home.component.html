@@ -1,0 +1,13 @@
+<section>
+ <form style="display: flex" autocomplete="off">
+  <input type="text" placeholder="Filter by city" #filter name="search" autocomplete="off" />
+  <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+ </form>
+</section>
+<section class="results">
+ <!-- <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation">
+ </app-housing-location> -->
+ @for (housingLocation of filteredLocationList; track $index) {
+ <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+ }
+</section>

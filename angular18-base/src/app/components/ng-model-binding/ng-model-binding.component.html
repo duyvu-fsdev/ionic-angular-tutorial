@@ -1,0 +1,8 @@
+<!-- ngModel - Data/Events/Two-way binding -->
+<div class="block">
+ <input autocomplete="off" type="text" [(ngModel)]="name" placeholder="Name" name="name" />
+ <li class="result">
+  <p class="hl-ss">{{ name }}</p>
+ </li>
+ <button class="primary" (click)="resetName()">Reset name</button>
+</div>

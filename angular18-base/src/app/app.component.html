@@ -1,0 +1,247 @@
+<div id="main">
+ <div class="container">
+  @if (currentPath !== 'home') {
+  <div class="left">
+   <div class="left-header">
+    <a [routerLink]="['/']">
+     <img
+      class="home"
+      src="/assets/images/home.png"
+      alt="logo"
+      aria-hidden="true"
+     />
+    </a>
+    <h1 id="title">Angular 18 base</h1>
+   </div>
+   <div class="lesson-2">
+    <a routerLink="/ng-model-binding"
+     >1. ngModel - Data/Events/Two-way binding</a
+    >
+   </div>
+   <div class="lesson-2">
+    <a routerLink="/directives">2. Directives</a>
+   </div>
+   <div class="lesson-2">
+    <a routerLink="/pipes">3. Pipes</a>
+   </div>
+   <div class="lesson-2">
+    <a routerLink="/custompipes">4. CustomPipes</a>
+   </div>
+   <div class="lesson-2">
+    <a routerLink="/services-di">5. Services and Dependency Injection</a>
+   </div>
+   <div class="lesson-2">
+    <a routerLink="/http-client">6. Http Client - Form (Reactive form)</a>
+   </div>
+   <div class="lesson-2">
+    <a routerLink="/lazy-loading">7. Lazy Loading</a>
+   </div>
+   <div class="lesson-2">
+    <a routerLink="/signals">8. Signals</a>
+   </div>
+   <div class="lesson-2">
+    <a routerLink="/performance">9. Performance</a>
+   </div>
+  </div>
+
+  <div class="right">
+   <div class="header">
+    <h1
+     style="
+      color: #ffffff;
+      padding: 20px 20px 20px 40px;
+      text-shadow: 1px 1px 10px #ff0000;
+      min-height: 77px;
+     "
+    >
+     {{ pageTitle }}
+    </h1>
+    <div class="hr"></div>
+   </div>
+   <div class="main-content"><router-outlet></router-outlet></div>
+  </div>
+  } @else {
+  <div class="left">
+   <div class="left-header">
+    <a [routerLink]="['/']">
+     <img
+      class="home"
+      src="/assets/images/home.png"
+      alt="logo"
+      aria-hidden="true"
+     />
+    </a>
+    <h1 id="title">Angular 18 base</h1>
+   </div>
+   <div class="lesson highlight">
+    <a routerLink="/basic-knowledge"> >>> Review basic knowledge Angular 18</a>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 1. Angular Architecture</h2>
+    <ul class="lesson-content">
+     <li>Components.</li>
+     <li>Templates with Data binding and Directives.</li>
+     <li>Modules.</li>
+     <li>Services and dependency injection.</li>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 2. Component</h2>
+    <ul class="lesson-content">
+     <li>Create Home component</li>
+     <ul class="sub">
+      <li>"ng g c components/home --skip-tests"</li>
+     </ul>
+     <li>import HomeComponent to AppComponent</li>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title"
+     >Lesson 3: Create the application’s HousingLocation component</h2
+    >
+    <ul class="lesson-content">
+     <li>Create HousingLocation component</li>
+     <ul class="sub">
+      <li>"ng g c components/housingLocation --skip-tests"</li>
+     </ul>
+     <li>import HomeComponent to HomeComponent</li>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 4: Creating an interface</h2>
+    <ul class="lesson-content">
+     <li>Create housinglocation interface</li>
+     <ul class="sub">
+      <li>"ng g interface interfaces/housinglocation"</li>
+     </ul>
+     <li>Create housingLocation : HousingLocation</li>
+     <li>import HousingLocation interface to HomeComponent</li>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 5: Add an input parameter to the component</h2>
+    <ul class="lesson-content">
+     <li>Learn and use &#64;Input in HousingLocationComponent</li>
+     <ul class="sub">
+      <li>"ng g interface interfaces/housinglocation"</li>
+     </ul>
+     <li>Add the Input property</li>
+     <ul class="sub">
+      <li>
+       "export class HousingLocationComponent {{ '{' }}<br />
+       ... <br />
+       &#64;Input() housingLocation!: HousingLocation;<br />
+       ...<br />
+       {{ '}' }}"
+      </li>
+     </ul>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title"
+     >Lesson 6 - Add a property binding to a component’s template</h2
+    >
+    <ul class="lesson-content">
+     <li>Update tag in the HomeComponent template</li>
+     <ul class="sub">
+      <li>&lt;app-housing-location [housingLocation]="housingLocation"/&gt;</li>
+     </ul>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title"
+     >Lesson 7 - Add an interpolation to a component’s template</h2
+    >
+    <ul class="lesson-content">
+     <li
+      >Update HousingLocationComponent template to include interpolated
+      values</li
+     >
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 8 - *ngFor/&#64;for</h2>
+    <ul class="lesson-content">
+     <li
+      >Update HousingLocationComponent template to include interpolated
+      values</li
+     >
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 9 - Services</h2>
+    <ul class="lesson-content">
+     <li>Create a new service (housing)</li>
+     <ul class="sub">
+      <li>"ng g s service/housing --skip-tests"</li>
+     </ul>
+     <li>Add static data to the housing service</li>
+     <li>Inject the housing service into HomeComponent</li>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 10: Routes</h2>
+    <ul class="lesson-content">
+     <li>Create a default details component</li>
+     <ul class="sub">
+      <li>"ng g c components/details --skip-tests"</li>
+     </ul>
+     <li>Add routing to the application</li>
+     <li>Add route to new component</li>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 11 - Integrate details page into application</h2>
+    <ul class="lesson-content">
+     <li>Get route parameters</li>
+     <li>Customize the DetailComponent</li>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 12 - Form</h2>
+    <ul class="lesson-content">
+     <li>Add a method to send form data (housing service)</li>
+     <li>Add the form to the details page</li>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 13 - Add the search feature to your app</h2>
+    <ul class="lesson-content">
+     <li>Update the home component properties</li>
+     <li>Implement the event handler function</li>
+    </ul>
+   </div>
+   <div class="lesson">
+    <h2 class="title">Lesson 14: HTTP communication</h2>
+    <ul class="lesson-content">
+     <li>Configure the JSON server</li>
+     <li>Update service to use web server instead of local array</li>
+    </ul>
+   </div>
+   <div class="lesson highlight">
+    <a routerLink="/basic-knowledge"> >>> Review basic knowledge Angular 18</a>
+   </div>
+  </div>
+  <div class="right">
+   <div class="header" style="background-color: #ffffff; padding: 10px">
+    <img
+     style="cursor: pointer"
+     routerLink="/"
+     class="brand-logo"
+     src="/assets/logo.svg"
+     alt="logo"
+     aria-hidden="true"
+    />
+   </div>
+   <router-outlet></router-outlet>
+  </div>
+  }
+ </div>
+</div>
+@if (message ) {
+<div class="dialog-container">
+ <div class="dialog-box">
+  {{ message }}
+ </div>
+</div>
+}
